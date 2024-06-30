@@ -6,7 +6,7 @@
 /*   By: gtsuchid <gtsuchid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 23:22:53 by gtsuchid          #+#    #+#             */
-/*   Updated: 2024/05/19 23:24:07 by gtsuchid         ###   ########.fr       */
+/*   Updated: 2024/06/30 13:17:05 by gtsuchid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
-# include "libft/libft.h"
+# include "../libft.h"
 
 typedef struct s_flag
 {

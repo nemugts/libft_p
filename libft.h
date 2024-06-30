@@ -6,19 +6,24 @@
 /*   By: gtsuchid <gtsuchid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:37:10 by gtsuchid          #+#    #+#             */
-/*   Updated: 2024/05/02 01:07:25 by gtsuchid         ###   ########.fr       */
+/*   Updated: 2024/06/30 13:19:32 by gtsuchid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include "ft_printf/ft_printf.h"
+# include <fcntl.h>
 # include <limits.h>
 # include <stdint.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-# include <stdio.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
 
 typedef struct s_list
 {
@@ -26,6 +31,9 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+char	*get_next_line(int fd);
+char	*get_new_line(char **save, int fd);
+char	*gnl_strjoin(char const *save, char const *buf, int read_size);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
